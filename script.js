@@ -1,10 +1,10 @@
-// Start music when tap screen
+// Start music
 document.getElementById("start-screen").addEventListener("click", () => {
   document.getElementById("music-container").style.display = "block";
   document.getElementById("start-screen").style.display = "none";
 });
 
-// Typewriter + scroll animation
+// Typewriter effect
 const quotes = document.querySelectorAll('.quote, .final-quote');
 
 function typeWriter(element) {
@@ -30,6 +30,18 @@ function checkVisibility() {
     }
   });
 }
-
 window.addEventListener('scroll', checkVisibility);
 window.addEventListener('load', checkVisibility);
+
+// Floating Hearts
+const heartsContainer = document.getElementById('hearts-container');
+function createHeart() {
+  const heart = document.createElement('div');
+  heart.classList.add('heart');
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+  heart.innerHTML = '❤';
+  heartsContainer.appendChild(heart);
+  setTimeout(() => heart.remove(), 8000);
+}
+setInterval(createHeart, 500);
