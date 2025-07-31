@@ -1,18 +1,29 @@
-let sections = document.querySelectorAll("section");
-let currentIndex = 0;
-let startScreen = document.getElementById("start-screen");
+// Typewriter + scroll animation
+const quotes = document.querySelectorAll('.quote, .final-quote');
 
-startScreen.addEventListener("click", () => {
-  // Show and start YouTube music
-  document.getElementById("music-container").style.display = "block";
-  startScreen.style.display = "none";
+function typeWriter(element) {
+  const text = element.dataset.text;
+  element.textContent = '';
+  let i = 0;
+  function typing() {
+    if (i < text.length) {
+      element.textContent += text.charAt(i);
+      i++;
+      setTimeout(typing, 70);
+    }
+  }
+  typing();
+}
 
-  // Start auto-scroll
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % sections.length;
-    window.scrollTo({
-      top: sections[currentIndex].offsetTop,
-      behavior: "smooth"
-    });
-  }, 5000);
-});
+function checkVisibility() {
+  quotes.forEach(q => {
+    const rect = q.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.7 && rect.bottom > 0 && !q.classList.contains('fade-in')) {
+      q.classList.add('fade-in');
+      typeWriter(q);
+    }
+  });
+}
+
+window.addEventListener('scroll', checkVisibility);
+window.addEventListener('load', checkVisibility);
