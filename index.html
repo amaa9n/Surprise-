@@ -8,86 +8,47 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Tap to Start Screen -->
-<div id="start-screen">
-  <!-- Tap to Start Screen -->
-<div id="start-screen">
-  <h1>💖 Tap to Begin 💖</h1>
-  <p>Made with ❤️ by Amaan Khan</p>
-</div>
 
-<!-- Background Music -->
-<div id="music-container" style="display:none;">
-  <iframe id="yt-music" width="0" height="0" 
-    src="https://www.youtube.com/embed/VnKANqDpGF0?autoplay=1&loop=1&playlist=VnKANqDpGF0"
-    frameborder="0" allow="autoplay"></iframe>
-</div>
-  <!-- Sections -->
+  <!-- Background Music -->
+  <div id="music-container">
+    <iframe id="yt-music" width="0" height="0"
+      src="https://www.youtube.com/embed/VnKANqDpGF0?autoplay=1&loop=1&playlist=VnKANqDpGF0"
+      frameborder="0" allow="autoplay"></iframe>
+  </div>
+
   <div class="container">
-    <section>
-      <img class="bg-img" src="images/photo1.jpg">
-      <div class="overlay"></div>
-      <div class="quote font1">Mariyam ❤️ This is for you</div>
+    <section style="--bg:url('images/photo1.jpg')">
+      <div class="quote font1" data-text="Mariyam ❤️ This is for you"></div>
     </section>
-
-    <section>
-      <img class="bg-img" src="images/photo2.jpg">
-      <div class="overlay"></div>
-      <div class="quote font2">Every love story is beautiful, but ours is my favorite.</div>
+    <section style="--bg:url('images/photo2.jpg')">
+      <div class="quote font2" data-text="Every love story is beautiful, but ours is my favorite."></div>
     </section>
-
-    <section>
-      <img class="bg-img" src="images/photo3.jpg">
-      <div class="overlay"></div>
-      <div class="quote font3">You are my today and all of my tomorrows.</div>
+    <section style="--bg:url('images/photo3.jpg')">
+      <div class="quote font3" data-text="You are my today and all of my tomorrows."></div>
     </section>
-
-    <section>
-      <img class="bg-img" src="images/photo4.jpg">
-      <div class="overlay"></div>
-      <div class="quote font1">I fall in love with you more every single day.</div>
+    <section style="--bg:url('images/photo4.jpg')">
+      <div class="quote font1" data-text="I fall in love with you more every single day."></div>
     </section>
-
-    <section>
-      <img class="bg-img" src="images/photo5.jpg">
-      <div class="overlay"></div>
-      <div class="quote font2">When I see you, I see my whole world.</div>
+    <section style="--bg:url('images/photo5.jpg')">
+      <div class="quote font2" data-text="When I see you, I see my whole world."></div>
     </section>
-
-    <section>
-      <img class="bg-img" src="images/photo6.jpg">
-      <div class="overlay"></div>
-      <div class="quote font3">My favorite place is inside your hug.</div>
+    <section style="--bg:url('images/photo6.jpg')">
+      <div class="quote font3" data-text="My favorite place is inside your hug."></div>
     </section>
-
-    <section>
-      <img class="bg-img" src="images/photo7.jpg">
-      <div class="overlay"></div>
-      <div class="quote font1">You’re not just my love, you’re my reason to live.</div>
+    <section style="--bg:url('images/photo7.jpg')">
+      <div class="quote font1" data-text="You’re not just my love, you’re my reason to live."></div>
     </section>
-
-    <section>
-      <img class="bg-img" src="images/photo8.jpg">
-      <div class="overlay"></div>
-      <div class="quote font2">With you, forever doesn’t feel long enough.</div>
+    <section style="--bg:url('images/photo8.jpg')">
+      <div class="quote font2" data-text="With you, forever doesn’t feel long enough."></div>
     </section>
-
-    <section>
-      <img class="bg-img" src="images/photo9.jpg">
-      <div class="overlay"></div>
-      <div class="quote font3">You are the poem my heart keeps writing.</div>
+    <section style="--bg:url('images/photo9.jpg')">
+      <div class="quote font3" data-text="You are the poem my heart keeps writing."></div>
     </section>
-
-    <section class="final-section">
-      <img class="bg-img" src="images/photo10.jpg">
-      <div class="overlay"></div>
-      <div class="final-quote">💖 You are my soul, my heartbeat, my forever Mariyam 💖</div>
+    <section class="final" style="--bg:url('images/photo10.jpg')">
+      <div class="final-quote" data-text="💖 You are my soul, my heartbeat, my forever Mariyam 💖"></div>
       <div class="footer">Made with ❤️ by Amaan Khan</div>
     </section>
   </div>
-
-  <!-- Floating hearts and images -->
-  <div class="floating-container"></div>
 
   <script src="script.js"></script>
 </body>
