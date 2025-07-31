@@ -1,3 +1,9 @@
+// Start music when tap screen
+document.getElementById("start-screen").addEventListener("click", () => {
+  document.getElementById("music-container").style.display = "block";
+  document.getElementById("start-screen").style.display = "none";
+});
+
 // Typewriter + scroll animation
 const quotes = document.querySelectorAll('.quote, .final-quote');
 
